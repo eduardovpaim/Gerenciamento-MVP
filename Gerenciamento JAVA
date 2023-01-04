@@ -1,0 +1,91 @@
+import java.util.*;
+
+public class SchoolManagementSystem {
+  
+  // classe para armazenar informações de um aluno
+  static class Student {
+    String name;
+    String enrollmentNumber;
+    String course;
+    String semester;
+    String email;
+    String phone;
+    String address;
+    String password;
+  }
+  
+  // classe para armazenar informações de um professor
+  static class Professor {
+    String name;
+    String employeeNumber;
+    String department;
+    String email;
+    String phone;
+    String address;
+    String password;
+  }
+  
+  // classe para armazenar informações de um funcionário
+  static class Employee {
+    String name;
+    String employeeNumber;
+    String department;
+    String email;
+    String phone;
+    String address;
+    String password;
+  }
+  
+  // listas para armazenar os alunos, professores e funcionários do sistema
+  static List<Student> students = new ArrayList<>();
+  static List<Professor> professors = new ArrayList<>();
+  static List<Employee> employees = new ArrayList<>();
+  
+  // método para adicionar um novo aluno ao sistema
+  static void addStudent(Student student) {
+    students.add(student);
+  }
+  
+  // método para adicionar um novo professor ao sistema
+  static void addProfessor(Professor professor) {
+    professors.add(professor);
+  }
+  
+  // método para adicionar um novo funcionário ao sistema
+  static void addEmployee(Employee employee) {
+    employees.add(employee);
+  }
+  
+  // método para buscar um aluno pelo número de matrícula
+  static Student findStudent(String enrollmentNumber) {
+    for (Student student : students) {
+      if (student.enrollmentNumber.equals(enrollmentNumber)) {
+        return student;
+      }
+    }
+    return null;
+  }
+  
+  // método para buscar um professor pelo número de funcionário
+  static Professor findProfessor(String employeeNumber) {
+    for (Professor professor : professors) {
+      if (professor.employeeNumber.equals(employeeNumber)) {
+        return professor;
+      }
+    }
+    return null;
+  }
+  
+  // método para buscar um funcionário pelo número de funcionário
+  static Employee findEmployee(String employeeNumber) {
+    for (Employee employee : employees) {
+      if (employee.employeeNumber.equals(employeeNumber)) {
+        return employee;
+      }
+    }
+    return null;
+  }
+  
+  // método principal para executar o sistema
+  public static void main(String[] args) {
+  }
